@@ -1,0 +1,15 @@
+[package]
+name = "flutter_rust_demo"
+version = "0.1.0"
+authors = ["Murali Mohan Rath <murali@mmrath.com>"]
+
+[dependencies]
+log = "^0.3"
+
+[target.'cfg(target_os="android")'.dependencies]
+jni = { version = "^0.5", default-features = false }
+
+
+[lib]
+name = "flutter_rust_demo"
+crate-type = ["staticlib", "cdylib"]
